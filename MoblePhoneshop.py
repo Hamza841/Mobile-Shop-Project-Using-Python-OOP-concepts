@@ -124,13 +124,41 @@ def customer():
     print("""
     Press 1) for Viewing the collection of mobiles phones to buy.....
     press 2) for selling your old mobile at affordable price.........
-    
+
     """)
     try:
         user_choice = int(input("What you want: "))
         if user_choice == 1:
-            import os
-            os.system("mobile.py")
+            f = open("mobile.py")
+            # print(f.readline())
+            print(f.readlines())
+            f.close()
+
+        elif user_choice == 2:
+            print("Hi There! Which mobile you want to sell.")
+            old_sell_mobile_model = input("Moile Model >").lower()
+            old_sell_mobile_condition = input("Moile condition New or old:  >").lower()
+            your_price_to_sell = int(input("Moile Price you want to sell >"))
+            if old_sell_mobile_model == "SAMSUNG":
+                print("Yes we take Samsung Mobiles..")
+
+            elif old_sell_mobile_condition == 'OLD' or 'NEW':
+                print("Great! We take ", old_sell_mobile_condition, "Mobiles.")
+
+            else:
+                print("Sorry We dont take these mobile..")
+
+            # elif 12000 < your_price_to_sell == 8000:
+            #     import random
+            #     price = random.randint(8000, 12000)
+            #     print("Yes Sir All done! kindly receive your sum of ", price, "from the shop Cashier.")
+
+            def sell():
+                import random
+                price = random.randint(8000, 12000)
+                print("Yes Sir All done! kindly receive your sum of market price", price, "from the shop Cashier.")
+
+            sell()
         else:
             print("Hi")
     except ValueError:
