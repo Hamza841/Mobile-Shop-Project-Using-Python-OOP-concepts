@@ -1,3 +1,3 @@
 # Mobile-Shop-Project-Using-Python-OOP-concepts
-Half of the work is done and half of the functions are yet to be complete.If someone wants to complete, and use this code, you are good to go.
+Hi I created this project for a virtual mobile shop, You are good to use this for your personal use.
 Get the code in file named as (CodePython)
